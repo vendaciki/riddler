@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+    <head>
+
+        <title>Quiz</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+        
+        <div id="intro-container">
+            <h1>Vítejte v kvízu!</h1>
+            <p style="font-size: 20px;">
+                Dostaneš časově omezených 12 hádanek a pouze 2 pokusy. <br>
+                U každé hádanky je možnost nápovědy, ovšem pozor, při kliknutí na ní, přijdete o 5 vteřin svého času. <br>
+                Pro úspěšné ukončení hry musíš mít alespoň 80%. <br>
+                Po absolvování této hranice, dostaneš za odměnu finální souřadnice.
+            </p>
+            <button id="start-button">Start</button>
+        </div>
+    
+        <div id="quiz-container" style="display: none;">
+            <!-- Obsah kvízu bude zobrazen až po stisknutí tlačítka "Start" -->
+            
+            <div class="question">
+                <button id="hint-button" onclick="showHint()">?</button>
+                <h2 id="question-container"></h2>
+            </div>
+            <div class="answer">
+                <input type="text" id="answer-input">
+                <button style="font-size: 20px;" id="next-question-button">Další otázka</button>
+            </div>
+            <div style="display: flex; flex-wrap: wrap;">
+                <h2 id="result"></h2>
+                <button id="last-attempt-button" style="display: none;">Poslední pokus</button>
+            </div>
+        </div>
+        
+        <script src="script.js"></script>
+
+    </body>
+
+</html>
